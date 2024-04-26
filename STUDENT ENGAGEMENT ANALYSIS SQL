@@ -1,0 +1,18 @@
+-- Step 1: Duplicate the table 'vtt' to 'vttclean'
+CREATE TABLE vttclean AS SELECT * FROM vtt;
+
+-- Step 2: Alter data type for timeto and timefrom
+ALTER TABLE vtt
+MODIFY COLUMN timefrom TIME(3),
+MODIFY COLUMN timeto TIME(3);
+
+-- Step 3: Perform the substraction
+SELECT *, TIMESTAMPDIFF(MICROSECOND, timefrom, timeto) / 1000 AS milliseconds
+FROM vtt;
+
+-- Step 4: Add milliseconds into the table
+ALTER TABLE vttclean ADD COLUMN milliseconds INT;
+
+-- Step 5: Update and save the function permenantly
+UPDATE vttclean 
+SET milliseconds = TIMESTAMPDIFF(MICROSECOND, timefrom, timeto) / 1000;
