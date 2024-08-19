@@ -40,7 +40,6 @@ To streamline the analysis of student engagement data, the original vtt table wa
 ### Data Visualisation with R
 
 
-Here’s a more fluent version of your content:
 
 R was selected for this analysis due to its robust capabilities in data manipulation and visualization. The RMySQL, dplyr, forcats, and ggplot2 libraries were employed to seamlessly connect to the MySQL database, process the data, and produce a compelling visual representation.
 
