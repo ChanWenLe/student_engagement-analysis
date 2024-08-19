@@ -39,13 +39,14 @@ To streamline the analysis of student engagement data, the original vtt table wa
 
 ### Data Visualisation with R
 
-R was chosen for this analysis due to its powerful capabilities in data manipulation and visualization. The RMySQL, dplyr, forcats, and ggplot2 libraries were utilized to seamlessly connect to the MySQL database, manipulate the data, and create a compelling visual representation.
 
-The process began by connecting to the anl503 database and retrieving the vttclean table into a data frame. The total airtime for each student was then calculated by summing the milliseconds column, followed by filtering out entries where RegName was 'INSTRUCTOR' or missing.
+Here’s a more fluent version of your content:
 
-To enhance clarity, the results were arranged in descending order based on the total duration. This arrangement was achieved using the fct_reorder function from the forcats package. The final step involved plotting the data with ggplot2, where a bar chart was created to visualize the accumulated airtime for each student. The chart was designed with clear labels, a formatted y-axis, and an informative title to facilitate easy interpretation of student engagement.
+R was selected for this analysis due to its robust capabilities in data manipulation and visualization. The RMySQL, dplyr, forcats, and ggplot2 libraries were employed to seamlessly connect to the MySQL database, process the data, and produce a compelling visual representation.
 
-This approach effectively highlights student participation, making it easy-to-understand for readers to identify and compare the engagement levels across different students.
+The analysis began by connecting to the anl503 database and loading the vttclean table into a data frame. The total airtime for each student was then computed by summing the milliseconds column, followed by filtering out entries where RegName was either 'INSTRUCTOR' or missing.
+
+To improve clarity, the results were arranged in descending order based on total duration using the fct_reorder function from the forcats package. Finally, the data was visualized using ggplot2, creating a bar chart that effectively displays the accumulated airtime for each student. This visualization makes it easy for readers to identify and compare student engagement levels.
 ![image](https://github.com/user-attachments/assets/e7622f14-ee74-4b26-bf60-f3e33b928f4e)
 
 
